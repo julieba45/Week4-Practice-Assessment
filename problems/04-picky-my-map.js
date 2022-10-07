@@ -15,9 +15,19 @@ You may not use Array's `map()`, `filter()`, or `forEach()` methods.
 ***********************************************************************/
 
 function pickyMyMap(arr, cb) {
-	// Your code here
+	let newarr = [];
+	for (let i = 0; i < arr.length; i++){
+		let ele = arr[i];
+		if(cb(ele)){
+			newarr.push(cb(ele))
+		}
+	}
+	console.log(newarr)
+	return newarr
 
 }
+// const nums = [1, 2, 3, 4];
+// pickyMyMap(nums, (num) => num - 2); // [-1, 1, 2]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

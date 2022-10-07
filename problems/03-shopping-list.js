@@ -20,10 +20,22 @@ console.log(clothesList); // ['tshirt', 'pants']
 ***********************************************************************/
 
 function shoppingList(list) {
-  // Your code here
-
+  return function (item){ //in first scenario, maple syrup is the item
+    list.push(item)
+    return list
+  }
 
 }
+// const groceryList = ['eggs']
+// const addToGroceryList = shoppingList(groceryList); // returns a function
+// // console.log(addToGroceryList)
+// console.log(addToGroceryList('maple syrup')); // returns ['eggs', 'maple syrup']
+
+// const clothesList = []
+// const addToClothesList = shoppingList(clothesList);
+// addToClothesList('tshirt'); // returns ['tshirt']
+// addToClothesList('pants'); // returns ['tshirt', 'pants']
+// console.log(clothesList); // ['tshirt', 'pants']
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = shoppingList;
